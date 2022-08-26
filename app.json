@@ -3,10 +3,10 @@
     "review": {
       "addons": [
         "heroku-postgresql:hobby-dev"
-      ],
-      "scripts": {
-        "postdeply": "bundle exec rake db:schema:load db:seed"
-      }
+      ]
     }
+  },
+  "scripts": {
+    "postdeply": "./bin/rails rake db:schema:load db:seed"
   }
 }
