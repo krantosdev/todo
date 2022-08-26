@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2022_08_25_205859) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "todo_items", force: :cascade do |t|
     t.string "content"
-    t.integer "todo_list_id", null: false
+    t.bigint "todo_list_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "completed_at"
