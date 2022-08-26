@@ -7,6 +7,6 @@
     }
   },
   "scripts": {
-    "postdeply": "bundle exec rake db:schema:load db:seed"
+    "postdeply": "./bin/rails rake db:schema:load db:seed"
   }
 }
