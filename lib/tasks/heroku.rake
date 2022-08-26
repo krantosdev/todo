@@ -10,11 +10,11 @@ namespace :heroku do
 
   task :migrate do
     puts 'Run migration with Heroku'
-    'heroku run rake db:migrate'
+    'heroku run rake db:migrate -a todo-kr-stg'
   end
 
   task :seed do
     puts 'Seed database'
-    'heroku run rake db:seed'
+    'heroku run rake db:seed -a todo-kr-stg'
   end
 end
