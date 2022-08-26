@@ -10,8 +10,8 @@ namespace :heroku do
       # Rake::Task["db:migrate"].invoke
       # puts "Seeding the DB..."
       # Rake::Task["db:seed"].invoke
-      'heroku run rake db:migrate -a todo-kr-stg'
-      'heroku run rake db:seed -a todo-kr-stg'
+      'heroku run rake db:migrate'
+      'heroku run rake db:seed'
     end
   end
 end
