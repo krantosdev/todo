@@ -12,7 +12,7 @@ ActiveRecord::Base.connection.tables.each do |table|
   if table != 'schema_migrations'
     # http://stackoverflow.com/a/7758797
     p table
-    ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table};")
+    ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table} CASCADE;")
     # http://stackoverflow.com/questions/2097052/rails-way-to-reset-seed-on-id-field
     ActiveRecord::Base.connection.reset_pk_sequence! table
   end
