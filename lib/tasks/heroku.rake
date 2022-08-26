@@ -1,6 +1,6 @@
 namespace :heroku do
   desc "Run migrations and seed db"
-  task :release => :environment do
+  task :release do
     seedForE2E = ENV['E2E'] || false
     if seedForE2E
       # Rake::Task["heroku:migrate"].execute
