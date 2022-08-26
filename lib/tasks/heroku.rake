@@ -6,9 +6,9 @@ namespace :heroku do
       # Rake::Task["heroku:migrate"].execute
       # Rake::Task["heroku:seed"].execute
       puts 'Run migration with Heroku'
-        'heroku run rake db:migrate -a todo-kr-stg'
+      sh 'heroku run rake db:migrate -a todo-kr-stg'
       puts 'Seed database'
-      'heroku run rake db:seed -a todo-kr-stg'
+      sh 'heroku run rake db:seed -a todo-kr-stg'
     end
   end
 
