@@ -4,8 +4,8 @@ namespace :heroku do
     seedForE2E = ENV['E2E'] || false
     if seedForE2E
       puts "I'll reset, migrate and seed the database for testing purposes"
-      DatabaseCleaner.strategy = :truncation
-      DatabaseCleaner.clean
+      # DatabaseCleaner.strategy = :truncation
+      # DatabaseCleaner.clean
       # puts "Migrating..."
       # Rake::Task["db:migrate"].invoke
       # puts "Seeding the DB..."
