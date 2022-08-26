@@ -3,7 +3,7 @@ namespace :heroku do
   task :release => :environment do
     seedForE2E = ENV['E2E'] || false
     if seedForE2E
-      puts "I'll reset, migrate and seed the database for testing purposes"
+      puts "I'll reset, migrate and seed the database"
       # DatabaseCleaner.strategy = :truncation
       # DatabaseCleaner.clean
       # puts "Migrating..."
