@@ -11,6 +11,7 @@ ActiveRecord::Base.connection.tables.each do |table|
   # Don't clear our migration history! Clear everything else.
   if table != 'schema_migrations'
     # http://stackoverflow.com/a/7758797
+    p table
     ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table};")
     # http://stackoverflow.com/questions/2097052/rails-way-to-reset-seed-on-id-field
     ActiveRecord::Base.connection.reset_pk_sequence! table
