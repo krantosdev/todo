@@ -3,7 +3,8 @@ namespace :heroku do
   task :release do
     seedForE2E = ENV['E2E'] || false
     if seedForE2E
-      puts "I'll migrate and seed the database for testing purposes"
+      puts "I'll reset, migrate and seed the database for testing purposes"
+      'heroku run pg:reset'
       'heroku run rake db:migrate'
       'heroku run rake db:seed'
     end
