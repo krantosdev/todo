@@ -3,8 +3,8 @@ namespace :heroku do
   task :release => :environment do
     seedForE2E = ENV['E2E'] || false
     if seedForE2E
-      Rake::Task["heroku:migrate"].invoke
-      Rake::Task["heroku:seed"].invoke
+      Rake::Task["heroku:migrate"].execute
+      Rake::Task["heroku:seed"].execute
     end
   end
 
