@@ -13,7 +13,7 @@ namespace :heroku do
     'heroku run rake db:migrate -a todo-kr-stg'
   end
 
-  task :seed do
+  task :seed => :environment do
     puts 'Seed database'
     'heroku run rake db:seed -a todo-kr-stg'
   end
