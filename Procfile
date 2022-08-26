@@ -1,1 +1,1 @@
-release: bundle exec rake heroku:release
+release: bundle exec rake heroku:release $RACK_ENV
