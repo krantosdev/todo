@@ -6,16 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #
-# This block will automatically empty the database every time db:seed is run.
-ActiveRecord::Base.connection.tables.each do |table|
-  # Don't clear our migration history! Clear everything else.
-  if table != 'schema_migrations'
-    # http://stackoverflow.com/a/7758797
-    ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table} CASCADE;")
-    # http://stackoverflow.com/questions/2097052/rails-way-to-reset-seed-on-id-field
-    ActiveRecord::Base.connection.reset_pk_sequence! table
-  end
-end
 
 todo_list = TodoList.new
 todo_list.title = 'Comprar en el super'
